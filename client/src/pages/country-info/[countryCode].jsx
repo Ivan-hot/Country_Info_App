@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import BorderCountries from '../../components/BorderCountries';
+import PopulationChart from '../../components/PopulationChart';
 
 const CountryInfo = () => {
   const router = useRouter();
@@ -26,9 +28,9 @@ const CountryInfo = () => {
   return (
     <div>
       <h1>{countryInfo.name}</h1>
-      <p>Population: {countryInfo.population}</p>
-      <p>Border Countries: {countryInfo.borders.join(', ')}</p>
       <img src={countryInfo.flagUrl} alt={`${countryInfo.name} Flag`} />
+      <BorderCountries borders={countryInfo.borders} />
+      <PopulationChart populationData={countryInfo.populationData} />
     </div>
   );
 };
