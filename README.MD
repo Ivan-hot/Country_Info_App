@@ -27,6 +27,7 @@ npm install @nestjs/platform-express
 npm install class-validator class-transformer
 npm install dotenv
 npm install -D @types/express
+npm install chart.js react-chartjs-2
 
 files/folders
 nest g module countries
@@ -74,6 +75,10 @@ Will see:
 [{"countryCode":"AD","name":"Andorra"},{"countryCode":"AL","name":"Albania"},{"countryCode":"AM","name":"Armenia"},{"countryCode":"AR","name":"Argentina"},{"countryCode":"AT","name":"Austria"},
 ...]
 
+
+http://localhost:3000/countries/country-info/AD
+will see
+{"countryCode":"AD","borders":[{"commonName":"France","officialName":"French Republic","countryCode":"FR","region":"Europe","borders":null},{"commonName":"Spain","officialName":"Kingdom of Spain","countryCode":"ES","region":"Europe","borders":null}],"populationData":[{"country":"Arab World","code":"ARB","iso3":"ARB","populationCounts":[{"year":1960,"value":92197753},{"year":1961,"value":94724510},{"year":1962,"value":97334442},{"year":1963,"value":100034179},{"year":1964,"value":102832760},{"year":1965,"value":105736431},{"year":1966,"value":108758610},{"year":1967,"value":111899364},{"year":1968,"value":115136178},{"year":1969,"value":118437195},{"year":1970,"value":121785650},{"year":1971,"value":125164745}, ......
 
 
 

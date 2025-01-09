@@ -36,9 +36,10 @@ let CountriesController = class CountriesController {
             const flagUrl = flagResponse.data.data?.[0]?.image || '';
             return {
                 countryCode,
+                name: bordersResponse.data.name,
+                flagUrl,
                 borders: borderCountries,
                 populationData,
-                flagUrl,
             };
         }
         catch (error) {
