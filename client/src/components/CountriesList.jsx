@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import axios from 'axios';
+import { fetchAvailableCountries } from '../services/countriesService';
 
 const CountriesList = () => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    async function fetchCountries() {
+
+    const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/countries/available-countries');
-        setCountries(response.data);
+        const data = await fetchAvailableCountries();
+        setCountries(data);
       } catch (error) {
         console.error('Error fetching countries:', error);
       }
-    }
-    fetchCountries();
+    };
+
+    fetchData();
   }, []);
 
   return (
