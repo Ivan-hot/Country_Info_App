@@ -49,7 +49,7 @@ To run unit tests:
 
 - **GET /countries/available-countries**: Returns a list of available countries.
 - **GET /countries/country-info/{countryCode}**: Returns detailed information about a specific country.
-Eample:
+Example:
 - **GET /countries/country-info/AD**
 
 ## Code Quality
